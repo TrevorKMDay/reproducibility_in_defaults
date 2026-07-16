@@ -1,0 +1,6 @@
+.DS_Store
+.Rhistory
+
+# Data files
+*.dta
+*.csv
