@@ -6,9 +6,11 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
 
 ## Tests I did
 
-- **Independent *t*-test**: Python (`statsmodels` 0.14.6), MATLAB (R26a; SMLTK)
-- **Paired *t*-test**: Python (`scipy` 1.17.1), MATLAB (R26a; SMLTK)
-- **ANOVA**: R (`effectsize` 1.0.3)
+- **Independent *t*-test**: Python (`statsmodels`, v. 0.14.6),
+    MATLAB (R26a; SMLTK)
+- **Paired *t*-test**: Python (`scipy` v. 1.17.1), MATLAB (R26a; SMLTK)
+- **ANOVA**: R (`effectsize` v. 1.0.3)
+- **SEM**: R (`lavaan` v. 0.6-21)
 
 SMLTK: *Stats and Machine Learning Toolkit*
 

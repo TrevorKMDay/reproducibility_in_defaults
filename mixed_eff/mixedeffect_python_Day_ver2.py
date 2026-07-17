@@ -41,8 +41,7 @@ from pathlib import Path
 
 # Load data ====
 
-data = pd.read_csv(Path("C:/Users/Trevor/Documents/research/",
-                        "reproducibility_in_defaults/mixed_eff/") /
+data = pd.read_csv(Path("~/Projects/comp_rep/mixed_eff/") /
                         "mixed-stata_protzko.csv")
 
 # Fit model ====
