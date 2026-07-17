@@ -10,7 +10,9 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
     MATLAB (R26a; SMLTK)
 - **Paired *t*-test**: Python (`scipy` v. 1.17.1), MATLAB (R26a; SMLTK)
 - **ANOVA**: R (`effectsize` v. 1.0.3)
-- **SEM**: R (`lavaan` v. 0.6-21)
+- **SEM**: R (`lavaan` v. 0.7-2)
+- **EFA**: R (`lavaan` v. 0.7-2)
+- **CFA**: R (`lavaan` v. 0.7-2)
 
 SMLTK: *Stats and Machine Learning Toolkit*
 
