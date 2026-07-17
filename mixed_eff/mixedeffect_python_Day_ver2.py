@@ -4,7 +4,6 @@
 import pandas as pd
 
 # Version: 0.14.6
-import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
 from pathlib import Path
@@ -42,10 +41,9 @@ from pathlib import Path
 
 # Load data ====
 
-data = sm.datasets.get_rdataset("dietox", "geepack").data
-
-data = pd.read_stata(Path("~/Projects/comp_rep/mixed_eff") /
-                     "2024-07-18-squo-debias-long-blind.dta")
+data = pd.read_csv(Path("C:/Users/Trevor/Documents/research/",
+                        "reproducibility_in_defaults/mixed_eff/") /
+                        "mixed-stata_protzko.csv")
 
 # Fit model ====
 
@@ -57,7 +55,10 @@ data = pd.read_stata(Path("~/Projects/comp_rep/mixed_eff") /
 # By default, smf.mixedlm() doesn't handle missing values (or well), so in
 # order to get anything, you have to do missing="drop"
 
+# Model specification
 md = smf.mixedlm("loyal ~ squo", data, groups=data["id"], missing="drop")
+
+# run fit
 mdf = md.fit()
 
 print(mdf.summary())
