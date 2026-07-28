@@ -42,3 +42,13 @@ fitMeasures(cfa1, c("CFI", "TLI", "RMSEA"))
 
 #   cfi   tli rmsea 
 # 0.936 0.922 0.072 
+
+cfa1_standard <- standardizedSolution(cfa1) %>%
+  filter(
+    op == "=~"
+  ) %>%
+  mutate(
+    to_copy = str_glue("{lhs} {op} {rhs}: {round(est.std, 3)}")
+  )
+
+clipr::write_clip(cfa1_standard$to_copy)
