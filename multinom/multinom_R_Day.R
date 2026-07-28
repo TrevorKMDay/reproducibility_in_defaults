@@ -22,14 +22,17 @@ data2 <- data %>%
   select(KBH_q1_KBH_q1_5_KBH_q1_grid, country, age_int_all, gender_all) %>%
   mutate(
     # Country and gender seem to be factors, not numbers
-    across(c(country, gender_all), as.factor)
+    # UPDATE: July 28, Protzko says leave as numeric
+    # across(c(country, gender_all), as.factor)
   )
 
 fit1 <- multinom(KBH_q1_KBH_q1_5_KBH_q1_grid ~ country + age_int_all + 
                       gender_all, 
                   data = data2)
 
-# AIC = 13771.91
+LL <- logLik(fit1)
+-2 * LL
+AIC(fit1) # 14417.08
 
 # Calculate p values
 
@@ -43,3 +46,25 @@ z_scores <- coefficients / std_errors
 # Compute p-values
 p_values <- 2 * (1 - pnorm(abs(z_scores)))
 p_values
+
+result_strings <- c()
+
+for (i in 1:nrow(coefficients)) {
+
+  for (j in 1:ncol(coefficients)) {
+
+    string <- str_glue("{rownames(coefficients)[i]}: ",
+                       "{round(coefficients[i, j], 3)} ",
+                       "({round(std_errors[i, j], 3)}), p = ",
+                       "{round(p_values[i, j], 3)}")
+
+    print(string)
+
+    result_strings <- c(result_strings, string)
+
+  }
+
+}
+
+final_results <- paste(result_strings, collapse = "; ")
+clipr::write_clip(final_results)
