@@ -1,5 +1,5 @@
 
-# Insructions
+# Instructions
 
 # SEM
 # make a latent variable called recommend with the following three variables: 
@@ -13,8 +13,6 @@
 #     less50k	less75k	less100k	
 #     northeast	midwest	west	regionmiss	
 
-
-
 library(tidyverse)
 
 # ver. 0.6-21
@@ -22,6 +20,8 @@ library(lavaan)
 
 data <- read_csv("~/Projects/comp_rep/sem/sem-stata-Protzko.csv", 
                   show_col_types = FALSE, na = "9999")
+
+sum(is.na(data))
 
 model_spec <- "
 
