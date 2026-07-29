@@ -12,4 +12,4 @@ contingency = pd.crosstab(data["quartile"], data["covidence_support"])
 
 stat, p, dof, expected = chi2_contingency(contingency)
 
-print(f"chi2({dof}) = {stat:.3f}, p-value: {p:.3f}")
+print(f"chi2 = {stat:.3f}, p-value: {p:.3f}")
