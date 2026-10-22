@@ -14,9 +14,11 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
   - MATLAB (R26a; SMLTK)
 - **ANOVA**:
   - R (`effectsize` v. 1.0.3)
+  - Python (`statsmodels` v. 0.14.6)
 - **SEM**:
   - R (`lavaan` v. 0.7-2)
   - Python (`semopy` v. 2.3.11)
+  - **X** Matlab (couldn't figure this one out)
 - **EFA**:
   - R (`lavaan` v. 0.7-2)
   - Python (`factor_analyzer` v. 0.5.1)
@@ -29,6 +31,13 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
   - Python (`statsmodels` v. 0.14.6)
 - **Multinominal logistic regression**:
   - R (`nnet` v. 7.3-20)
+
+## Notes
+
+(From the `my_cells.csv` file).
+
+`n1`: I couldn't figure out what to do for the MATLAB SEM.
+`y1`: Verification of originally reported results
 
 ## Extra
 

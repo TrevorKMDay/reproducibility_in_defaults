@@ -1,10 +1,10 @@
 test,       R,  Matlab, Python
-anova,      Y,  n,      n,
+anova,      Y,  n,      y1,
 cfa,        Y,  n,      n,
 efa,        Y,  n,      n,
 mixed_eff,  n,  n,      Y,
 multinom,   Y,  n,      n,
-sem,        Y,  *,      n,
+sem,        Y,  n1,     n,
 ttest,      n,  Y,      Y,
 pairedttest,n,  Y,      Y,
 chi2,       n,  n/a,    Y,
