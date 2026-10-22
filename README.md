@@ -19,6 +19,7 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
   - Python (`semopy` v. 2.3.11)
 - **EFA**:
   - R (`lavaan` v. 0.7-2)
+  - Python (`factor_analyzer` v. 0.5.1)
 - **CFA**:
   - R (`lavaan` v. 0.7-2)
 - **Chi-squared**:
@@ -28,6 +29,8 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
   - Python (`statsmodels` v. 0.14.6)
 - **Multinominal logistic regression**:
   - R (`nnet` v. 7.3-20)
+
+## Extra
 
 SMLTK: *Stats and Machine Learning Toolkit*
 
