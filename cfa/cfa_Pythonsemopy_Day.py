@@ -19,13 +19,13 @@
 # and RMSEA
 
 import pandas as pd
-from semopy import Model, calc_stats, efa
+from semopy import Model, calc_stats
 
 data = pd.read_csv("~/Projects/comp_rep/cfa/cfa_R_Roberson.csv")
 
 model_spec = """
 
-    jl =~ SSWQ1 + SSWQ5 + SSWQ9 + SSWQ13
+    jl =~ SSWQ1 + SSWQ5 + SSWQ9  + SSWQ13
     sc =~ SSWQ2 + SSWQ6 + SSWQ10 + SSWQ14
     ep =~ SSWQ3 + SSWQ7 + SSWQ11 + SSWQ15
     ae =~ SSWQ4 + SSWQ8 + SSWQ12 + SSWQ16
@@ -34,27 +34,35 @@ model_spec = """
 
 m = Model(model_spec)
 
-fit = m.fit(data)
+fit = m.fit(data,)
 
 estimates = m.inspect()
+std_estimates = m.inspect(std_est=True)
 
 stats = calc_stats(m)
 stats[["CFI", "TLI", "RMSEA"]]
 
-import numpy as np
-from factor_analyzer import ConfirmatoryFactorAnalyzer, ModelSpecificationParser
+# Create string to copy-paste
 
-model_dict = {
-    "jl": ["SSWQ1", "SSWQ5", "SSWQ9", "SSWQ13"],
-    "sc": ["SSWQ2", "SSWQ6", "SSWQ10", "SSWQ14"],
-    "ep": ["SSWQ3", "SSWQ7", "SSWQ11", "SSWQ15"],
-    "ae": ["SSWQ4", "SSWQ8", "SSWQ12", "SSWQ16"],
-}
+std_est_16 = std_estimates.iloc[0:15]
 
-raw_array = np.array(data.values, copy=True)
+string1 = [f"{x} =~ {y}: {v:.3f}" for x, y, v in 
+            zip(std_est_16.rval, std_est_16.lval, std_est_16["Est. Std"])]
 
-model_spec_fa = ModelSpecificationParser.parse_model_specification_from_dict(raw_array, model_dict)
+# import numpy as np
+# from factor_analyzer import ConfirmatoryFactorAnalyzer, ModelSpecificationParser
 
-# 4. Initialize and fit the CFA model
-cfa = ConfirmatoryFactorAnalyzer(model_spec, disp=False)
-cfa.fit(df.values)
+# model_dict = {
+#     "jl": ["SSWQ1", "SSWQ5", "SSWQ9", "SSWQ13"],
+#     "sc": ["SSWQ2", "SSWQ6", "SSWQ10", "SSWQ14"],
+#     "ep": ["SSWQ3", "SSWQ7", "SSWQ11", "SSWQ15"],
+#     "ae": ["SSWQ4", "SSWQ8", "SSWQ12", "SSWQ16"],
+# }
+
+# raw_array = data.to_numpy().copy()
+
+# model_spec_fa = ModelSpecificationParser.parse_model_specification_from_dict(raw_array, model_dict)
+
+# # 4. Initialize and fit the CFA model
+# cfa = ConfirmatoryFactorAnalyzer(model_spec_fa, disp=False)
+# cfa.fit(raw_array.values)

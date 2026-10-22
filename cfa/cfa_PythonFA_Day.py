@@ -33,5 +33,5 @@ model_dict = {
 model_spec_fa = ModelSpecificationParser.parse_model_specification_from_dict(data, model_dict)
 
 # 4. Initialize and fit the CFA model
-cfa = ConfirmatoryFactorAnalyzer(model_spec, disp=False)
-cfa.fit(df.values)
+cfa = ConfirmatoryFactorAnalyzer(model_spec_fa, disp=False)
+cfa.fit(data.values)

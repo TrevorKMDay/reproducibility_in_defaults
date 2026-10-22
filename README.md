@@ -24,6 +24,7 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
   - Python (`factor_analyzer` v. 0.5.1)
 - **CFA**:
   - R (`lavaan` v. 0.7-2)
+  - Python (`semopy` v. 2.3.11)
 - **Chi-squared**:
   - MATLAB (R26a), no solution
   - Python (`scipy` v. 1.17.1)

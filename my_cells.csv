@@ -1,6 +1,6 @@
 test,       R,  Matlab, Python
 anova,      Y,  n,      y1,
-cfa,        Y,  n,      n,
+cfa,        Y,  n,      Y,
 efa,        Y,  n,      n,
 mixed_eff,  n,  n,      Y,
 multinom,   Y,  n,      n,
