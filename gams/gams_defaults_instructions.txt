@@ -1,0 +1,4 @@
+run a Generalized Additive Model (GAM), the dependent variable is PAI_SUI (suicidal Ideation)
+The predictor variables are the categorical variable Overall_Combined, categorical variable Gender, and Age
+Report the coefficients and p-values for the intercept, Overall_Combined levels 1 through 3,
+the overall R2 adjusted and total % deviance explained

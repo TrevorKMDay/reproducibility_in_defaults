@@ -35,12 +35,12 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
   - Python (`statsmodels` v. 0.14.6)
 - **Multiple regression**
   - Python (`statsmodels` v. 0.14.6)
+- **GAMs**
+  - Python (`pygam` v. 0.12.0)
 
 ## Requested
 
 - **Measurement invariance**
-  - Python
-- **GAMs**
   - Python
 - **Survival analysis**
   - Python
