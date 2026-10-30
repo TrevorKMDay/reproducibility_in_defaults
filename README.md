@@ -32,16 +32,15 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
   - Python (`statsmodels` v. 0.14.6)
 - **Multinominal logistic regression**:
   - R (`nnet` v. 7.3-20)
+  - Python (`statsmodels` v. 0.14.6)
+- **Multiple regression**
+  - Python (`statsmodels` v. 0.14.6)
 
 ## Requested
 
 - **Measurement invariance**
   - Python
-- **Multiple regression**
-  - Python
 - **GAMs**
-  - Python
-- **Multinomial logit**
   - Python
 - **Survival analysis**
   - Python

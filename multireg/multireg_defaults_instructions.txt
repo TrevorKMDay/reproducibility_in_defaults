@@ -1,0 +1,3 @@
+run a multiple regression, the dependent variable is 'science'
+The predictor variables are math female socst read
+Report the b-values, and p-value for math female socst read
