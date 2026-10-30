@@ -49,6 +49,8 @@ std_est_16 = std_estimates.iloc[0:15]
 string1 = [f"{x} =~ {y}: {v:.3f}" for x, y, v in 
             zip(std_est_16.rval, std_est_16.lval, std_est_16["Est. Std"])]
 
+string2 = "; ".join(string1)
+
 # import numpy as np
 # from factor_analyzer import ConfirmatoryFactorAnalyzer, ModelSpecificationParser
 

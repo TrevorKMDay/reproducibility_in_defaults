@@ -33,6 +33,23 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
 - **Multinominal logistic regression**:
   - R (`nnet` v. 7.3-20)
 
+## Requested
+
+- **Measurement invariance**
+  - Python
+- **Multiple regression**
+  - Python
+- **GAMs**
+  - Python
+- **Multinomial logit**
+  - Python
+- **Survival analysis**
+  - Python
+- **Path analysis**
+  - Python
+- **Meta-analysis / meta-regression**
+  - Python
+
 ## Notes
 
 (From the `my_cells.csv` file).
