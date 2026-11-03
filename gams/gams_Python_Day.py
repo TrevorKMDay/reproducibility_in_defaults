@@ -44,4 +44,4 @@ age_string = f"age: {round(float(result.coef_[age_term]), 3)}"
 
 [float(round(x, 3)) for x in result.statistics_["p_values"]]
 
-"; ".join([", ".join(oc_string), ", ".joing(gen_string), age_string])
+"; ".join([", ".join(oc_string), ", ".join(gen_string), age_string])
