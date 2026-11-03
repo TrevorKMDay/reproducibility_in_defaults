@@ -37,13 +37,11 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
   - Python (`statsmodels` v. 0.14.6)
 - **GAMs**
   - Python (`pygam` v. 0.12.0)
+- **Survival analysis**
+  - Python (`statsmodels` v. 0.14.6)
 
 ## Requested
 
-- **Measurement invariance**
-  - Python
-- **Survival analysis**
-  - Python
 - **Path analysis**
   - Python
 - **Meta-analysis / meta-regression**
@@ -53,7 +51,7 @@ for John Protzko's "*Reproducibility? in Different Stats program defaults*"
 
 (From the `my_cells.csv` file).
 
-`n1`: I couldn't figure out what to do for the MATLAB SEM.
+`n1`: I couldn't figure out what to do.
 `y1`: Verification of originally reported results
 
 ## Extra
